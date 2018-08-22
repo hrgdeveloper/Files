@@ -32,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "new Commit", Toast.LENGTH_SHORT).show();
+    }
+
     public void makeFolder(View view) throws IOException {
 
             Calendar calendar = getDateFromString("2018-07-3 17:28:13");
@@ -163,8 +169,6 @@ public class MainActivity extends AppCompatActivity {
         if (!doucmnets.exists()) {
             doucmnets.mkdir();
         }
-
-
         }
 
 
